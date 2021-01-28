@@ -12,27 +12,68 @@
 </head>
 
 <body>
-    <header class="mobile-nav"></header>
-    <main>
-        <div class="navigation-wrap">
-            <ul class="menu-list">
-                <li>
-                    <a href="">About me</a>
-                </li>
-                <li>
-                    <a href="">Portfolio</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
-                <li>
-                    <a href="">My coding playlist</a>
-                </li>
-            </ul>
-            <h1 class="socials">Follow me:</h1>
-            <ul class="socials-list">
-                <li>
-                    <a href="https://www.instagram.com/webdev.michelle/" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i> webdev.michelle</a
+    <header class="nav-wrap">
+        <button id="toggler"><i class="fas fa-bars"></i></button>
+    </header>
+    <div class="nav-mobile collapse" id="toggleMenu">
+        <ul class="menu-list">
+            <li>
+                <a href="">About me</a>
+            </li>
+            <li>
+                <a href="">Portfolio</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+            <li>
+                <a href="">My coding playlist</a>
+            </li>
+        </ul>
+        <h1 class="socials">Follow me:</h1>
+        <ul class="socials-list">
+            <li>
+                <a href="https://www.instagram.com/webdev.michelle/" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i> webdev.michelle</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/webdev-michelle/"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i> webdev-michelle</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/mmorales_dev"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><i class="fab fa-twitter"></i> mmorales_dev</a
+          >
+        </li>
+      </ul>
+    </div>
+    <main class="main-content">
+      <div class="nav-main">
+        <ul class="menu-list">
+          <li>
+            <a href="">About me</a>
+            </li>
+            <li>
+                <a href="">Portfolio</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+            <li>
+                <a href="">My coding playlist</a>
+            </li>
+        </ul>
+        <h1 class="socials">Follow me:</h1>
+        <ul class="socials-list">
+            <li>
+                <a href="https://www.instagram.com/webdev.michelle/" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram"></i> webdev.michelle</a
             >
           </li>
           <li>
@@ -54,10 +95,8 @@
         </ul>
       </div>
       <div class="page-wrap">
-        <div class="section1 content-top">
-          <div class="img-wrap">
-            <img src="src/images/flat pic-05.png" alt="" class="profile-pic" />
-          </div>
+        <div class="profile-div">
+          <img src="src/images/flat pic-05.png" alt="" class="profile-pic" />
           <div class="text-wrap">
             <h1 class="name">Michelle Morales Corrales</h1>
             <h2 class="sub-name">
@@ -66,21 +105,21 @@
             <h3 class="pronoun">PGP - (She/Her)</h3>
           </div>
         </div>
-        <div class="section2">
-          <div class="bio-wrap">
-            <p class="bio">
-              Hi! thank you for taking an interest, I am a junior web developer
-              currently based in the UK 🇬🇧 and originally from the beautiful
-              Mexican Desert 🌵.<br /><br />
-              I am the lady of many hats; coming from a financial background and
-              now diving into the world of coding and web design.<br /><br />
-              Being so passionate about front end my stack consists of Sass,
-              Bootstrap, Vanilla JS and REST API. | am currently learning React,
-              and in search for my first position within a company.
-            </p>
-          </div>
-        </div>
+      </div>
+      <div class="bio-wrap">
+        <p class="bio">
+          Hi! thank you for taking an interest, I am a junior web developer
+          currently based in the UK 🇬🇧 and originally from the beautiful Mexican
+          Desert 🌵.<br /><br />
+          I am the lady of many hats; coming from a financial background and now
+          diving into the world of coding web applications.<br /><br />
+          Being so passionate about front end my stack consists of Sass,
+          Bootstrap, Vanilla JS and REST API. | am currently learning React, and
+          in search for my first position within a company.
+        </p>
       </div>
     </main>
+
+    <script src="scripts/script.js"></script>
   </body>
 </html>

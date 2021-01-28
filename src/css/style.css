@@ -1,58 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Fira+Code&family=Josefin+Sans&display=swap');
 :root {
     --highlightColor: #e63256;
     --lightColor: #fcf9fa;
     --darkColor: #020201;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Fira+Code&family=Josefin+Sans&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: content-box;
 }
 
-body {
-    background: var(--lightColor);
-}
-
 
 /*GRID CLASSES FOR LAYOUT*/
 
-main {
+body {
+    background: var(--lightColor);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 95%;
+}
+
+.nav-wrap {
+    background: var(--lightColor);
+    /* this is the mobile navbar container*/
+    display: block;
+}
+
+.main-content {
     height: 100vh;
     display: grid;
-    grid-template-columns: 25% 75%;
-    grid-template-rows: 100%;
+    grid-template-columns: 20% 80%;
+    /* this is the main container which needs to be also a grid for the elements that go inside*/
+    grid-template-rows: 50% 50%;
 }
 
-.section1 {
+.nav-main {
     background: var(--lightColor);
-    display: flex;
-}
-
-.section2 {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    /* this is the large navbar container*/
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin: 10px 5px;
 }
 
 .page-wrap {
-    height: 100vh;
-    background: var(--lightColor);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 200px 100%;
+    display: flex;
 }
 
-.img-wrap,
-.text-wrap,
-.bio-wrap,
-.navigation-wrap {
-    margin: 10px;
-    padding: 10px;
+.profile-div {
+    display: flex;
+}
+
+.bio-wrap {
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
 
 /*MAIN STYLING*/
+
+#toggler {
+    background: none;
+    font-size: 2em;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    padding: 5px 15px;
+    outline: none;
+    border: none;
+    color: var(--highlightColor);
+}
+
+.collapse {
+    display: none;
+}
 
 .menu-list,
 .socials-list {
@@ -83,7 +103,7 @@ main {
 
 .menu-list li a:hover {
     background-size: 4px 50px;
-    color: var(--highlightColor);
+    color: var(--lightColor);
 }
 
 .socials-list li a {
@@ -104,11 +124,16 @@ main {
     font-size: 1.5em;
 }
 
+.text-wrap {
+    padding: 5px;
+}
+
 .name {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 2em;
     margin-bottom: 5px;
     color: var(--highlightColor);
+    padding: 20px 0 5px 0px;
 }
 
 .sub-name {
@@ -122,9 +147,11 @@ main {
     color: var(--highlightColor);
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
+    margin-top: 10px;
 }
 
 .profile-pic {
+    padding: 20px 20px 0 0;
     width: 120px;
     height: 150px;
 }
@@ -132,4 +159,50 @@ main {
 .bio {
     font-size: 1em;
     font-family: 'Fira Code', monospace;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 769px) {
+    .nav-wrap {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-main {
+        display: none;
+    }
+    .main-content {
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+    .bio-wrap {
+        grid-column-start: 1;
+    }
+    .nav-mobile {
+        margin-top: 35px;
+        padding: 20px;
+        position: absolute;
+        background: var(--lightColor);
+        width: 100%;
+        height: 100%;
+    }
+    .collapse {
+        display: none;
+    }
+    .profile-pic {
+        padding: 30px 10px 10px 10px;
+    }
+    .name {
+        padding: 30px 0 5px 0px;
+        font-size: 1.5em;
+    }
+    .sub-name {
+        padding-top: 15px;
+    }
+    .pronoun {
+        padding-top: 20px;
+    }
 }
