@@ -1,3 +1,10 @@
+:root {
+    --highlightColor: #e63256;
+    --lightColor: #fcf9fa;
+    --darkColor: #020201;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Fira+Code&family=Josefin+Sans&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +12,11 @@
 }
 
 body {
-    background: #fcf9fa;
+    background: var(--lightColor);
 }
+
+
+/*GRID CLASSES FOR LAYOUT*/
 
 main {
     height: 100vh;
@@ -15,20 +25,8 @@ main {
     grid-template-rows: 100%;
 }
 
-.navigation {
-    background: #fcf9fa;
-}
-
-.page-wrap {
-    height: 100vh;
-    background: #fcf9fa;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 200px 100%;
-}
-
 .section1 {
-    background: #fcf9fa;
+    background: var(--lightColor);
     display: flex;
 }
 
@@ -37,19 +35,101 @@ main {
     grid-column-end: 3;
 }
 
+.page-wrap {
+    height: 100vh;
+    background: var(--lightColor);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 100%;
+}
+
+.img-wrap,
+.text-wrap,
+.bio-wrap,
+.navigation-wrap {
+    margin: 10px;
+    padding: 10px;
+}
+
 
 /*MAIN STYLING*/
 
-.bio-wrap {
-    padding: 30px;
+.menu-list,
+.socials-list {
+    list-style-type: none;
+}
+
+.menu-list li,
+.socials-list li {
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.menu-list li a {
+    padding: 5px 0 0 5px;
+    text-decoration: none;
+    color: var(--highlightColor);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.7em;
+    transition: all 0.8s ease-in-out;
+    background: linear-gradient( to bottom, var(--darkColor) 0%, var(--darkColor) 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    text-decoration: none;
+    transition: background-size .2s;
+}
+
+.menu-list li a:hover {
+    background-size: 4px 50px;
+    color: var(--highlightColor);
+}
+
+.socials-list li a {
+    text-decoration: none;
+    color: var(--darkColor);
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.8em;
+}
+
+.socials-list li a:hover {
+    color: var(--highlightColor);
+    font-style: italic;
+}
+
+.socials {
+    margin-top: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5em;
+}
+
+.name {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: var(--highlightColor);
+}
+
+.sub-name {
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.pronoun {
+    font-size: 0.7em;
+    color: var(--highlightColor);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
 }
 
 .profile-pic {
-    margin: 20px;
     width: 120px;
     height: 150px;
 }
 
 .bio {
     font-size: 1em;
+    font-family: 'Fira Code', monospace;
 }
