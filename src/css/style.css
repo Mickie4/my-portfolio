@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Fira+Code&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Fira+Code:wght@400;600&family=Josefin+Sans:wght@400;600&display=swap');
 :root {
     --highlightColor: #e63256;
     --lightColor: #fcf9fa;
@@ -32,7 +32,7 @@ body {
     display: grid;
     grid-template-columns: 20% 80%;
     /* this is the main container which needs to be also a grid for the elements that go inside*/
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 25% 80%;
 }
 
 .nav-main {
@@ -54,6 +54,13 @@ body {
 .bio-wrap {
     grid-column-start: 2;
     grid-column-end: 3;
+}
+
+.portfolio-wrap {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 40% 40%;
 }
 
 
@@ -109,7 +116,7 @@ body {
 .socials-list li a {
     text-decoration: none;
     color: var(--darkColor);
-    font-family: 'Courier Prime', monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 0.8em;
 }
 
@@ -137,7 +144,7 @@ body {
 }
 
 .sub-name {
-    font-family: 'Courier Prime', monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 0.8em;
     margin-bottom: 5px;
 }
@@ -157,8 +164,29 @@ body {
 }
 
 .bio {
-    font-size: 1em;
-    font-family: 'Fira Code', monospace;
+    font-size: 1.5em;
+    font-family: 'Courier Prime', monospace;
+    padding-right: 100px;
+}
+
+
+/* PORTFOLIO SECTION STYLING */
+
+.page-header {
+    display: block;
+    width: 80%;
+}
+
+.page-header h1 {
+    text-align: right;
+    padding: 20px 25px;
+    color: var(--highlightColor);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3em;
+}
+
+.page-header p {
+    padding: 10px;
 }
 
 
@@ -176,10 +204,11 @@ body {
     }
     .main-content {
         grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
+        grid-template-rows: 30% 50%;
     }
     .bio-wrap {
         grid-column-start: 1;
+        padding: 20px;
     }
     .nav-mobile {
         margin-top: 35px;
@@ -204,5 +233,17 @@ body {
     }
     .pronoun {
         padding-top: 20px;
+    }
+    .bio {
+        padding: 0;
+    }
+    /*PORTFOLIO STYLING*/
+    .page-header h1 {
+        font-size: 2em;
+    }
+    .page-header p {
+        padding: 10px 20px;
+        text-align: justify;
+        font-family: 'Courier Prime', monospace;
     }
 }
