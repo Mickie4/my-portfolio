@@ -60,7 +60,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 20% 40% 40%;
+    grid-template-rows: 10% 40% 40%;
 }
 
 
@@ -117,7 +117,7 @@ body {
     text-decoration: none;
     color: var(--darkColor);
     font-family: 'Fira Code', monospace;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .socials-list li a:hover {
@@ -128,7 +128,8 @@ body {
 .socials {
     margin-top: 20px;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.5em;
+    font-size: 2em;
+    font-weight: 600;
 }
 
 .text-wrap {
@@ -170,27 +171,117 @@ body {
 }
 
 
-/* PORTFOLIO SECTION STYLING */
+/*---------------------------------------------- PORTFOLIO SECTION STYLING */
 
 .page-header {
-    display: block;
-    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 .page-header h1 {
-    text-align: right;
-    padding: 20px 25px;
+    text-align: center;
+    margin: 50px 100px;
     color: var(--highlightColor);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3em;
 }
 
-.page-header p {
+.projects-wrap1 {
+    display: flex;
+    justify-items: center;
+    margin: 10px 20px;
+}
+
+.projects-wrap2 {
+    display: flex;
+    justify-items: center;
+    margin: 10px 20px;
+}
+
+.display-wrap {
     padding: 10px;
+    width: 50%;
+    height: 100%;
+}
+
+.project-display {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+.project-description {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    background: rgba(230, 50, 86, 0.71);
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+.project-description:hover {
+    opacity: 1;
+}
+
+.description-wrap {
+    background-color: rgba(252, 249, 250, 0.8);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.description-wrap p {
+    color: var(--darkColor);
+    font-family: 'Fira Code', monospace;
+    font-size: 1em;
+    padding: 10px;
+    line-height: 30px;
+}
+
+.description-wrap h3 {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.5em;
+}
+
+.demo,
+.repo {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: var(--darkColor);
+    color: var(--lightColor);
+    font-family: 'Fira Code', monospace;
+    transition: all 0.5s ease-in-out;
+}
+
+.demo:hover,
+.repo:hover {
+    color: var(--highlightColor);
 }
 
 
 /*MEDIA QUERIES*/
+
+
+/*--------------------------    MEDIA QUERIES*/
 
 @media (min-width: 769px) {
     .nav-wrap {
@@ -204,7 +295,7 @@ body {
     }
     .main-content {
         grid-template-columns: 100%;
-        grid-template-rows: 30% 50%;
+        grid-template-rows: 20% 50%;
     }
     .bio-wrap {
         grid-column-start: 1;
@@ -217,33 +308,60 @@ body {
         background: var(--lightColor);
         width: 100%;
         height: 100%;
+        z-index: 9999;
     }
     .collapse {
         display: none;
+    }
+    .menu-list li a:hover {
+        background-size: 2px 2px;
+        color: var(--highlightColor);
     }
     .profile-pic {
         padding: 30px 10px 10px 10px;
     }
     .name {
-        padding: 30px 0 5px 0px;
-        font-size: 1.5em;
+        padding: 30px 0 0px 0px;
+        font-size: 1.3em;
     }
     .sub-name {
-        padding-top: 15px;
+        padding-top: 5px;
+        font-size: 0.7em;
     }
     .pronoun {
         padding-top: 20px;
     }
     .bio {
-        padding: 0;
+        padding: 0px;
+        font-size: 1em;
     }
-    /*PORTFOLIO STYLING*/
+    .bio-wrap {
+        padding: 25px 10px 10px 10px;
+    }
+    /*------------------------------------------PORTFOLIO STYLING*/
+    .projects-wrap1 {
+        display: block;
+        align-items: center;
+    }
     .page-header h1 {
-        font-size: 2em;
+        font-size: 3em;
+        margin: 10px;
+        padding-right: 30px;
     }
-    .page-header p {
-        padding: 10px 20px;
-        text-align: justify;
-        font-family: 'Courier Prime', monospace;
+    .project-display {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .project-img {
+        width: 100%;
+        height: 100%;
+    }
+    .display-wrap {
+        width: 100%;
+        padding: 10px 0 10px 0;
+    }
+    .portfolio-wrap {
+        grid-template-rows: 10% 50% 50% 50% 50%;
     }
 }
